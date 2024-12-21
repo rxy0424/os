@@ -64,5 +64,8 @@ jobs:
       - name: Making image
         run: make image IMAGE_XZ=1
 
-      - name: Uploading image
-        run: make upload
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: pikvm-image
+          path: images/*.img*
