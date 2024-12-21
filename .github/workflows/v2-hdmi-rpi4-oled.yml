@@ -1,0 +1,13 @@
+name: v2-hdmi-rpi4-oled
+on: workflow_dispatch
+
+jobs:
+  os:
+    uses: pikvm/os/.github/workflows/os.yml@master
+    with:
+      BOARD: rpi4
+      PLATFORM: v2-hdmi
+      SUFFIX: -oled
+      OLED: 1
+    secrets:
+      DEPLOY_KEY: "${{secrets.DEPLOY_KEY}}"
