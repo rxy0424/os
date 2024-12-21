@@ -3,7 +3,7 @@ on: workflow_dispatch
 
 jobs:
   os:
-    uses: pikvm/os/.github/workflows/os.yml@master
+    uses: rxy0424/os/.github/workflows/os.yml@master
     with:
       BOARD: rpi4
       PLATFORM: v2-hdmi
